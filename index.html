@@ -9,39 +9,39 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fff;
+            background-color: #000;
+            color: #fff;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             height: 100vh;
         }
         h1 {
             font-size: 3em;
-            color: #333;
-            margin-top: 20px;
+            margin-top: 10px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 80px;
+            height: auto;
+            margin-right: 10px;
         }
         .content {
-            position: relative;
             width: 100%;
-            height: 80vh; /* 80% of the screen height */
-            background-color: #fff;
+            height: 80vh;
+            background-color: #000;
         }
         .content remote-teleop-device {
             width: 100%;
             height: 100%;
         }
-        .logo {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            width: 100px;
-            height: auto;
-        }
     </style>
 </head>
 <body>
-    <h1>Embodied AI Demo</h1>
+    <h1><img src="/logo.png" alt="Logo" class="logo"> Demo</h1>
     <div class="content">
         <script src="https://portal.transitiverobotics.com/running/@transitive-robotics/remote-teleop/dist/remote-teleop-device.js?userId=eai&deviceId=d_8c2a01b13f"></script>
         <remote-teleop-device 
@@ -62,7 +62,6 @@
             type="v4l2src" 
             width="960" 
         />
-        <img src="/logo.png" alt="Logo" class="logo">
     </div>
 </body>
 </html>
